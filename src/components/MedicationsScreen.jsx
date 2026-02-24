@@ -10,6 +10,8 @@ const MedicationsScreen = ({
   medications = [],
   onAddClick,
   onDeleteMedication,
+  onTaken,
+  onRefill,
 }) => {
   const handleDelete = (id) => {
     if (onDeleteMedication) {
@@ -42,6 +44,8 @@ const MedicationsScreen = ({
                   key={medication.id}
                   medication={medication}
                   onDelete={handleDelete}
+                  onTaken={onTaken}
+                  onRefill={onRefill}
                 />
               ))}
             </div>

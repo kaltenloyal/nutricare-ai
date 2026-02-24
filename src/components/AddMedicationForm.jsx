@@ -3,13 +3,14 @@ import '../styles/AddMedicationForm.css';
 
 /**
  * Add Medication Form Component
- * Includes: name input, frequency dropdown, drowsy toggle, food selector
+ * Includes: name input, frequency dropdown, drowsy toggle, food selector, capsule count
  */
 const AddMedicationForm = ({ mealTimes, onSave, onCancel }) => {
   const [name, setName] = useState('');
   const [frequency, setFrequency] = useState('1');
   const [isDrowsy, setIsDrowsy] = useState(false);
   const [foodRequirement, setFoodRequirement] = useState('');
+  const [capsuleCount, setCapsuleCount] = useState('');
   const [errors, setErrors] = useState({});
 
   const handleSubmit = (e) => {
@@ -34,6 +35,7 @@ const AddMedicationForm = ({ mealTimes, onSave, onCancel }) => {
       frequency: parseInt(frequency),
       isDrowsy,
       foodRequirement,
+      capsuleCount: capsuleCount ? parseInt(capsuleCount) : null,
     };
 
     onSave(medicationData);
@@ -186,6 +188,26 @@ const AddMedicationForm = ({ mealTimes, onSave, onCancel }) => {
                 <div className="food-option-text">Doesn't Matter</div>
               </button>
             </div>
+          </div>
+
+          {/* Capsule Count Input */}
+          <div className="form-group">
+            <label htmlFor="capsule-count" className="form-label">
+              How many capsules? (Optional)
+            </label>
+            <input
+              id="capsule-count"
+              type="number"
+              value={capsuleCount}
+              onChange={(e) => setCapsuleCount(e.target.value)}
+              placeholder="e.g., 30"
+              className="form-input"
+              aria-label="Capsule count"
+              min="1"
+            />
+            <p className="form-hint">
+              Leave blank if not tracking capsules
+            </p>
           </div>
 
           {/* Action Buttons */}

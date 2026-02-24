@@ -1,0 +1,96 @@
+/* BottomNav Component Styles */
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 2px solid #e2e8f0;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  z-index: 50;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.nav-tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 16px;
+  background: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #64748b;
+  font-family: inherit;
+  min-height: 70px;
+  border-top: 3px solid transparent;
+}
+
+.nav-tab:hover {
+  background: #f8fafc;
+  color: #1e40af;
+}
+
+.nav-tab.active {
+  background: linear-gradient(to bottom, #f0f4ff, #ffffff);
+  color: #1e40af;
+  border-top-color: #1e40af;
+}
+
+.nav-tab:focus-visible {
+  outline: 3px solid #1e40af;
+  outline-offset: -3px;
+}
+
+.nav-icon {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.nav-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* High contrast support */
+@media (prefers-contrast: more) {
+  .bottom-nav {
+    border-top: 3px solid #000000;
+  }
+
+  .nav-tab.active {
+    background: #000000;
+    color: #ffffff;
+    border-top: 3px solid #000000;
+  }
+}
+
+/* Responsive for small screens */
+@media (max-width: 480px) {
+  .bottom-nav {
+    padding: 0;
+  }
+
+  .nav-tab {
+    min-height: 64px;
+    padding: 10px 12px;
+    gap: 4px;
+  }
+
+  .nav-icon {
+    font-size: 20px;
+  }
+
+  .nav-label {
+    font-size: 11px;
+  }
+}
