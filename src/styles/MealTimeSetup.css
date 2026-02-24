@@ -1,0 +1,185 @@
+/* MealTimeSetup Component Styles */
+
+.meal-time-setup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.meal-time-container {
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.meal-time-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.meal-time-subtitle {
+  font-size: 18px;
+  color: #64748b;
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.time-pickers-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 500px) {
+  .time-pickers-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.time-picker-card {
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.2s ease;
+}
+
+.time-picker-card:hover,
+.time-picker-card:focus-within {
+  border-color: #1e40af;
+  background: #f0f4ff;
+}
+
+.time-picker-label {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.time-picker-input {
+  width: 100%;
+  font-size: 24px;
+  padding: 16px;
+  border: 2px solid #cbd5e1;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  color: #1e293b;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.time-picker-input:hover {
+  border-color: #1e40af;
+}
+
+.time-picker-input:focus {
+  outline: none;
+  border-color: #1e40af;
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+
+/* Large tap target for elderly users */
+.save-meal-times-btn {
+  width: 100%;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+  min-height: 60px;
+}
+
+.save-meal-times-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(30, 64, 175, 0.4);
+  background: linear-gradient(135deg, #1e40af 0%, #1e40af 100%);
+}
+
+.save-meal-times-btn:active {
+  transform: translateY(0px);
+}
+
+.save-meal-times-btn:focus-visible {
+  outline: 3px solid #1e40af;
+  outline-offset: 2px;
+}
+
+/* High contrast support */
+@media (prefers-contrast: more) {
+  .meal-time-setup {
+    background: #ffffff;
+  }
+
+  .meal-time-container {
+    border: 3px solid #000000;
+  }
+
+  .time-picker-card {
+    border: 3px solid #000000;
+  }
+
+  .time-picker-input {
+    border: 3px solid #000000;
+  }
+}
+
+/* Responsive for small screens */
+@media (max-width: 480px) {
+  .meal-time-container {
+    padding: 24px;
+  }
+
+  .meal-time-title {
+    font-size: 26px;
+  }
+
+  .meal-time-subtitle {
+    font-size: 16px;
+  }
+
+  .time-pickers-grid {
+    gap: 16px;
+  }
+
+  .time-picker-card {
+    padding: 16px;
+  }
+
+  .time-picker-label {
+    font-size: 18px;
+  }
+
+  .time-picker-input {
+    font-size: 20px;
+    padding: 12px;
+  }
+
+  .save-meal-times-btn {
+    padding: 16px;
+    font-size: 18px;
+  }
+}

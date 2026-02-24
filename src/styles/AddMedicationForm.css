@@ -1,0 +1,341 @@
+/* AddMedicationForm Component Styles */
+
+.add-medication-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+  animation: fadeIn 0.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.add-medication-form-container {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.form-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-label {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+  display: block;
+}
+
+.form-input,
+.form-select {
+  font-size: 18px;
+  padding: 16px;
+  border: 2px solid #cbd5e1;
+  border-radius: 12px;
+  color: #1e293b;
+  background: white;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  min-height: 52px;
+}
+
+.form-input::placeholder {
+  color: #94a3b8;
+}
+
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #1e40af;
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+
+.form-input.error {
+  border-color: #dc2626;
+  background-color: #fef2f2;
+}
+
+.error-message {
+  font-size: 16px;
+  color: #dc2626;
+  font-weight: 500;
+}
+
+/* Toggle Container */
+.toggle-container {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  /* Minimum touch target */
+  min-height: 52px;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 14px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  border: 2px solid #cbd5e1;
+  border-radius: 12px;
+  background: white;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 52px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.toggle-btn:hover {
+  border-color: #1e40af;
+  background: #f0f4ff;
+}
+
+.toggle-btn.active {
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+  color: white;
+  border-color: #1e40af;
+}
+
+.toggle-btn:focus-visible {
+  outline: 3px solid #1e40af;
+  outline-offset: 2px;
+}
+
+.drowsy-note {
+  font-size: 16px;
+  color: #ea580c;
+  background: #fef3c7;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* Food Options Grid */
+.food-requirement-label {
+  margin-bottom: 4px;
+}
+
+.food-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.food-option-btn {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px;
+  border: 3px solid #cbd5e1;
+  border-radius: 16px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  min-height: 140px;
+}
+
+.food-option-btn:hover {
+  border-color: #1e40af;
+  background: #f0f4ff;
+  transform: translateY(-2px);
+}
+
+.food-option-btn.selected {
+  border-color: #1e40af;
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+  color: white;
+}
+
+.food-option-btn.error {
+  border-color: #dc2626;
+}
+
+.food-option-btn:focus-visible {
+  outline: 3px solid #1e40af;
+  outline-offset: 2px;
+}
+
+.food-option-icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.food-option-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: inherit;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.btn-cancel,
+.btn-save {
+  flex: 1;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-height: 56px;
+  min-width: 120px;
+}
+
+.btn-cancel {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.btn-cancel:hover {
+  background: #cbd5e1;
+  transform: translateY(-2px);
+}
+
+.btn-save {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+}
+
+.btn-save:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
+}
+
+.btn-cancel:focus-visible,
+.btn-save:focus-visible {
+  outline: 3px solid #1e40af;
+  outline-offset: 2px;
+}
+
+/* High contrast support */
+@media (prefers-contrast: more) {
+  .add-medication-form-container {
+    border: 3px solid #000000;
+  }
+
+  .form-input,
+  .form-select,
+  .toggle-btn,
+  .food-option-btn {
+    border: 3px solid #000000;
+  }
+
+  .toggle-btn.active,
+  .btn-save {
+    background: #000000;
+    color: white;
+    border: 3px solid #000000;
+  }
+}
+
+/* Responsive for small screens */
+@media (max-width: 480px) {
+  .add-medication-form-container {
+    padding: 24px;
+  }
+
+  .form-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .form {
+    gap: 20px;
+  }
+
+  .form-label {
+    font-size: 18px;
+  }
+
+  .form-input,
+  .form-select {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .food-options-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .food-option-btn {
+    min-height: 120px;
+    aspect-ratio: auto;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-cancel,
+  .btn-save {
+    flex: 1;
+    min-width: 100%;
+  }
+}
