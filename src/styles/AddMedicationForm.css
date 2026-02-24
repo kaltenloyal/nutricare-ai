@@ -109,6 +109,13 @@
   font-weight: 500;
 }
 
+.form-hint {
+  font-size: 14px;
+  color: #64748b;
+  margin: 4px 0 0 0;
+  font-style: italic;
+}
+
 /* Toggle Container */
 .toggle-container {
   display: flex;

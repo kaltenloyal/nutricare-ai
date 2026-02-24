@@ -1,0 +1,72 @@
+/* Logo Component Styles */
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-small {
+  width: 40px;
+  min-width: 40px;
+}
+
+.logo-small .logo-svg {
+  width: 40px;
+  height: 48px;
+}
+
+.logo-small .logo-text {
+  display: none;
+}
+
+.logo-medium {
+  width: 100%;
+}
+
+.logo-medium .logo-svg {
+  width: 50px;
+  height: 60px;
+}
+
+.logo-medium .logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.logo-large {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.logo-large .logo-svg {
+  width: 80px;
+  height: 96px;
+  margin: 0 auto 12px;
+  display: block;
+}
+
+.logo-large .logo-text {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.logo-svg {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+@media (max-width: 480px) {
+  .logo-medium .logo-svg {
+    width: 40px;
+    height: 48px;
+  }
+
+  .logo-medium .logo-text {
+    font-size: 18px;
+  }
+}
