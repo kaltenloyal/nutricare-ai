@@ -1,5 +1,16 @@
 /* Global Styles for NutriCare AI - Elderly-friendly design */
 
+:root {
+  --bg-900: #0f1419;
+  --bg-800: #1a2332;
+  --surface-1: #ffffff;
+  --surface-2: #f8fafc;
+  --text-strong: #1e293b;
+  --text-muted: #64748b;
+  --brand-600: #1e40af;
+  --brand-500: #2563eb;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,13 +18,12 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Avenir Next', 'Segoe UI', 'Trebuchet MS', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f8fafc;
-  color: #1e293b;
+  background-color: var(--surface-2);
+  color: var(--text-strong);
+  line-height: 1.45;
 }
 
 html {
@@ -46,12 +56,16 @@ input[type='radio'] {
 
 /* Remove default focus outline and add accessible custom one */
 :focus-visible {
-  outline: 3px solid #1e40af;
+  outline: 3px solid var(--brand-600);
   outline-offset: 2px;
 }
 
 /* Text selection contrast */
 ::selection {
-  background-color: #1e40af;
+  background-color: var(--brand-600);
   color: white;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
 }

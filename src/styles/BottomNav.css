@@ -5,7 +5,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: white;
+  background: rgba(255, 255, 255, 0.93);
+  backdrop-filter: blur(12px);
   border-top: 2px solid #e2e8f0;
   display: flex;
   justify-content: space-around;
@@ -38,9 +39,10 @@
 }
 
 .nav-tab.active {
-  background: linear-gradient(to bottom, #f0f4ff, #ffffff);
+  background: linear-gradient(to bottom, #e8efff, #ffffff);
   color: #1e40af;
   border-top-color: #1e40af;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .nav-tab:focus-visible {

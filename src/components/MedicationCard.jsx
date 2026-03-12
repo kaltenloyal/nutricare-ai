@@ -132,6 +132,17 @@ const MedicationCard = ({
           </span>
         </div>
 
+        {/* Food Requirement */}
+        {medication.foodRequirement && (
+          <div className="medication-info-row">
+            <span className="info-label">Food Requirement:</span>
+            <span className="food-requirement-badge">
+              {getFoodRequirementIcon(medication.foodRequirement)}{' '}
+              {getFoodRequirementText(medication.foodRequirement)}
+            </span>
+          </div>
+        )}
+
         {/* Capsule Count */}
         {medication.capsuleCount !== undefined &&
           medication.capsuleCount !== null && (

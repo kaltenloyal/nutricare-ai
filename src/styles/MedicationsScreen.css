@@ -4,6 +4,7 @@
   min-height: 100vh;
   background: linear-gradient(135deg, #1a2332 0%, #0f1419 100%);
   padding: 20px;
+  padding-bottom: 110px;
 }
 
 .medications-screen-container {
@@ -27,6 +28,7 @@
   color: #ffffff;
   margin: 0;
   line-height: 1.1;
+  text-shadow: 0 2px 14px rgba(2, 6, 23, 0.45);
 }
 
 /* Large Add Medication Button */
@@ -81,10 +83,11 @@
 
 /* Medications List Container */
 .medications-list-container {
-  background: white;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
   border-radius: 20px;
   padding: 24px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 14px 36px rgba(2, 6, 23, 0.18);
   min-height: 300px;
 }
 

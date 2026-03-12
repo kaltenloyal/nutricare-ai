@@ -1,13 +1,13 @@
 /* MedicationCard Component Styles */
 
 .medication-card {
-  background: white;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
   border: 2px solid #e2e8f0;
   border-radius: 16px;
   padding: 20px;
   margin-bottom: 16px;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
 }
 
 .medication-card:hover {
@@ -37,6 +37,7 @@
   color: #1e293b;
   margin: 0;
   line-height: 1.2;
+  letter-spacing: 0.01em;
 }
 
 .drowsy-badge {
@@ -126,7 +127,7 @@
   font-weight: 600;
   color: #64748b;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.7px;
 }
 
 /* Times List */
@@ -154,7 +155,7 @@
   border: 2px solid #059669;
   border-radius: 8px;
   padding: 8px 12px;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
   color: #047857;
   white-space: nowrap;
