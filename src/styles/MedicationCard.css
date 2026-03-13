@@ -2,238 +2,210 @@
 
 .medication-card {
   background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-  border: 2px solid #e2e8f0;
+  border: 1px solid #dbe4ef;
   border-radius: 16px;
-  padding: 20px;
-  margin-bottom: 16px;
+  padding: 18px;
   transition: all 0.2s ease;
-  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
 }
 
 .medication-card:hover {
-  border-color: #1e40af;
-  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.1);
-  transform: translateY(-2px);
+  border-color: #93c5fd;
+  box-shadow: 0 12px 22px rgba(37, 99, 235, 0.13);
+  transform: translateY(-1px);
 }
 
 .medication-card-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 16px;
-  margin-bottom: 20px;
+  gap: 14px;
+  margin-bottom: 16px;
 }
 
 .medication-card-title-section {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  flex-wrap: wrap;
   flex: 1;
 }
 
 .medication-card-title {
-  font-size: 24px;
-  font-weight: 700;
-  color: #1e293b;
+  font-size: clamp(20px, 2.6vw, 24px);
+  font-weight: 800;
+  color: #0f172a;
   margin: 0;
-  line-height: 1.2;
-  letter-spacing: 0.01em;
+  line-height: 1.1;
+  margin-right: 4px;
+}
+
+.drowsy-badge,
+.capsule-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .drowsy-badge {
-  display: inline-block;
-  background: #fef3c7;
-  border: 1px solid #fbbf24;
-  border-radius: 8px;
-  padding: 6px 10px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #a16207;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.capsule-badge {
-  display: inline-block;
-  border-radius: 8px;
-  padding: 6px 10px;
-  font-size: 14px;
-  font-weight: 600;
-  white-space: nowrap;
-  flex-shrink: 0;
+  background: #fff7ed;
+  border: 1px solid #fdba74;
+  color: #9a3412;
 }
 
 .capsule-badge.warning {
-  background: #fef3c7;
-  border: 1px solid #fbbf24;
-  color: #a16207;
+  background: #fffbeb;
+  border: 1px solid #fcd34d;
+  color: #92400e;
 }
 
 .capsule-badge.critical {
-  background: #fee2e2;
+  background: #fef2f2;
   border: 1px solid #fca5a5;
-  color: #991b1b;
+  color: #b91c1c;
 }
 
 .capsule-badge.empty {
-  background: #e5e7eb;
-  border: 1px solid #9ca3af;
-  color: #374151;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #334155;
 }
 
 .delete-btn {
-  width: 44px;
-  height: 44px;
-  padding: 8px;
-  font-size: 24px;
-  border: 2px solid #e2e8f0;
-  background: white;
-  color: #475569;
-  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-size: 20px;
+  border: 1px solid #dbe4ef;
+  background: #ffffff;
+  color: #64748b;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .delete-btn:hover {
-  border-color: #dc2626;
-  background: #fee2e2;
+  border-color: #fca5a5;
+  background: #fef2f2;
   color: #dc2626;
-}
-
-.delete-btn:focus-visible {
-  outline: 3px solid #dc2626;
-  outline-offset: 2px;
 }
 
 .medication-card-content {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
 .medication-info-row {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 7px;
 }
 
 .info-label {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 800;
   color: #64748b;
   text-transform: uppercase;
-  letter-spacing: 0.7px;
+  letter-spacing: 0.07em;
 }
 
-/* Times List */
 .times-list {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.time-badge {
-  display: inline-block;
-  background: #dbeafe;
-  border: 2px solid #0284c7;
-  border-radius: 8px;
-  padding: 8px 12px;
-  font-size: 18px;
+.time-badge,
+.food-requirement-badge,
+.frequency-badge,
+.capsule-count {
+  display: inline-flex;
+  align-items: center;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  padding: 7px 10px;
+  font-size: 15px;
   font-weight: 700;
-  color: #0369a1;
-  white-space: nowrap;
+  color: #1e40af;
+  width: fit-content;
 }
 
 .food-requirement-badge {
-  display: inline-block;
-  background: #ecfdf5;
-  border: 2px solid #059669;
-  border-radius: 8px;
-  padding: 8px 12px;
-  font-size: 17px;
-  font-weight: 600;
-  color: #047857;
-  white-space: nowrap;
+  background: #ecfeff;
+  border-color: #99f6e4;
+  color: #0f766e;
 }
 
 .frequency-badge {
-  display: inline-block;
-  background: #f3e8ff;
-  border: 2px solid #a855f7;
-  border-radius: 8px;
-  padding: 8px 12px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #7e22ce;
-  white-space: nowrap;
+  background: #f8fafc;
+  border-color: #dbe4ef;
+  color: #334155;
+}
+
+.capsule-count {
+  background: #f8fafc;
+  border-color: #dbe4ef;
+  color: #0f172a;
+}
+
+.capsule-count.critical {
+  background: #fef2f2;
+  border-color: #fca5a5;
+  color: #b91c1c;
+}
+
+.capsule-count.warning {
+  background: #fffbeb;
+  border-color: #fcd34d;
+  color: #92400e;
 }
 
 .capsule-info {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-}
-
-.capsule-count {
-  display: inline-block;
-  background: #dbeafe;
-  border: 2px solid #0284c7;
-  border-radius: 8px;
-  padding: 8px 12px;
-  font-size: 18px;
-  font-weight: 700;
-  color: #0369a1;
-  width: fit-content;
-}
-
-.capsule-count.critical {
-  background: #fee2e2;
-  border-color: #dc2626;
-  color: #991b1b;
-}
-
-.capsule-count.warning {
-  background: #fef3c7;
-  border-color: #fbbf24;
-  color: #a16207;
+  gap: 10px;
 }
 
 .refill-notification {
-  background: #fee2e2;
-  border: 2px solid #fca5a5;
-  border-radius: 8px;
-  padding: 12px;
+  background: #fff7ed;
+  border: 1px solid #fdba74;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .refill-message {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
-  color: #991b1b;
+  color: #9a3412;
   margin: 0 0 8px 0;
 }
 
 .refill-btn {
   width: 100%;
   padding: 10px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   color: white;
-  background: #dc2626;
+  background: #ea580c;
   border: none;
-  border-radius: 6px;
+  border-radius: 9px;
   cursor: pointer;
-  transition: all 0.2s ease;
-  min-height: 44px;
-  text-transform: uppercase;
+  min-height: 40px;
 }
 
 .refill-btn:hover {
-  background: #b91c1c;
+  background: #c2410c;
 }
 
 .refill-input-section {
@@ -244,9 +216,9 @@
 
 .refill-input {
   font-size: 16px;
-  padding: 10px;
-  border: 2px solid #dc2626;
-  border-radius: 6px;
+  padding: 9px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
   min-height: 40px;
 }
 
@@ -258,117 +230,63 @@
 .refill-confirm-btn,
 .refill-cancel-btn {
   flex: 1;
-  padding: 10px;
-  font-size: 14px;
+  padding: 9px;
+  font-size: 13px;
   font-weight: 700;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.2s ease;
-  min-height: 44px;
-  text-transform: uppercase;
+  min-height: 40px;
 }
 
 .refill-confirm-btn {
-  background: #22c55e;
+  background: #16a34a;
   color: white;
 }
 
-.refill-confirm-btn:hover {
-  background: #16a34a;
-}
-
 .refill-cancel-btn {
-  background: #e5e7eb;
-  color: #374151;
-}
-
-.refill-cancel-btn:hover {
-  background: #d1d5db;
+  background: #e2e8f0;
+  color: #334155;
 }
 
 .taken-btn {
   width: 100%;
-  padding: 12px;
-  font-size: 18px;
-  font-weight: 700;
+  padding: 11px 12px;
+  font-size: 16px;
+  font-weight: 800;
   color: white;
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.2s ease;
-  min-height: 48px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+  min-height: 44px;
+  box-shadow: 0 10px 16px rgba(5, 150, 105, 0.25);
 }
 
 .taken-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(34, 197, 94, 0.4);
-}
-
-.taken-btn:active {
-  transform: translateY(0);
-}
-
-.taken-btn:focus-visible {
-  outline: 3px solid #22c55e;
-  outline-offset: 2px;
+  transform: translateY(-1px);
 }
 
 .no-data {
-  font-size: 16px;
+  font-size: 14px;
   color: #94a3b8;
   font-style: italic;
 }
 
-/* High contrast support */
-@media (prefers-contrast: more) {
-  .medication-card {
-    border: 3px solid #000000;
-  }
-
-  .delete-btn {
-    border: 3px solid #000000;
-  }
-
-  .time-badge,
-  .food-requirement-badge,
-  .frequency-badge {
-    border: 3px solid #000000;
-  }
-}
-
-/* Responsive for small screens */
 @media (max-width: 480px) {
   .medication-card {
-    padding: 16px;
-    margin-bottom: 12px;
-  }
-
-  .medication-card-header {
-    gap: 12px;
-    margin-bottom: 16px;
+    padding: 14px;
   }
 
   .medication-card-title {
-    font-size: 20px;
-  }
-
-  .medication-card-content {
-    gap: 12px;
+    font-size: 19px;
   }
 
   .time-badge,
   .food-requirement-badge,
-  .frequency-badge {
-    font-size: 16px;
-    padding: 6px 10px;
-  }
-
-  .info-label {
+  .frequency-badge,
+  .capsule-count {
     font-size: 14px;
   }
 }

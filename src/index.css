@@ -1,14 +1,22 @@
 /* Global Styles for NutriCare AI - Elderly-friendly design */
 
 :root {
-  --bg-900: #0f1419;
-  --bg-800: #1a2332;
+  --bg-900: #101827;
+  --bg-800: #1a2438;
   --surface-1: #ffffff;
-  --surface-2: #f8fafc;
-  --text-strong: #1e293b;
+  --surface-2: #f1f5f9;
+  --surface-soft: #e2e8f0;
+  --text-strong: #0f172a;
   --text-muted: #64748b;
-  --brand-600: #1e40af;
-  --brand-500: #2563eb;
+  --brand-700: #1d4ed8;
+  --brand-600: #2563eb;
+  --brand-500: #3b82f6;
+  --accent: #14b8a6;
+  --danger: #dc2626;
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --shadow-lg: 0 20px 40px rgba(15, 23, 42, 0.15);
+  --shadow-md: 0 10px 24px rgba(15, 23, 42, 0.12);
 }
 
 * {
@@ -18,10 +26,10 @@
 }
 
 body {
-  font-family: 'Avenir Next', 'Segoe UI', 'Trebuchet MS', 'Helvetica Neue', sans-serif;
+  font-family: 'Nunito Sans', 'Avenir Next', 'Trebuchet MS', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--surface-2);
+  background: linear-gradient(180deg, #edf3ff 0%, #f8fafc 100%);
   color: var(--text-strong);
   line-height: 1.45;
 }
@@ -57,7 +65,8 @@ input[type='radio'] {
 /* Remove default focus outline and add accessible custom one */
 :focus-visible {
   outline: 3px solid var(--brand-600);
-  outline-offset: 2px;
+  outline-offset: 3px;
+  border-radius: 6px;
 }
 
 /* Text selection contrast */

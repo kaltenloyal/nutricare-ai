@@ -34,6 +34,12 @@ function App() {
   const [activeTab, setActiveTab] = useState('medications');
   const [isLoading, setIsLoading] = useState(true);
 
+  const lowStockCount = medications.filter((med) => (
+    med.capsuleCount !== null
+      && med.capsuleCount !== undefined
+      && med.capsuleCount <= 5
+  )).length;
+
   // Load data from localStorage on mount
   useEffect(() => {
     const savedProfile = storageUtils.getProfile();
@@ -196,8 +202,24 @@ function App() {
 
       {/* Patient Greeting */}
       {profile && (
-        <div className="patient-greeting">
-          <p>Hello, {profile.name}</p>
+        <div className="patient-greeting-wrap">
+          <div className="patient-greeting">
+            <p>Hello, {profile.name}</p>
+          </div>
+          <div className="summary-chips" aria-label="Health overview">
+            <div className="summary-chip">
+              <span className="summary-chip-label">Medications</span>
+              <span className="summary-chip-value">{medications.length}</span>
+            </div>
+            <div className={`summary-chip ${lowStockCount > 0 ? 'is-alert' : ''}`}>
+              <span className="summary-chip-label">Low stock</span>
+              <span className="summary-chip-value">{lowStockCount}</span>
+            </div>
+            <div className="summary-chip">
+              <span className="summary-chip-label">Age</span>
+              <span className="summary-chip-value">{profile.age}</span>
+            </div>
+          </div>
         </div>
       )}
 
